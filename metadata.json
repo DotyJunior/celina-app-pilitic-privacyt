@@ -1,0 +1,6 @@
+{
+  "name": "CelinaCriater - Legal & Privacy",
+  "description": "Política de Privacidade, Termos de Serviço e Exclusão de Dados do CelinaCriater.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

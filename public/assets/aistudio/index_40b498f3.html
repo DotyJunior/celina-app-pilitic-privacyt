@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelinaCriater - Legal & Privacy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #9b59b6; /* Cor roxa, remetendo a criatividade/IA */
+            border-bottom: 2px solid #9b59b6;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .nav-links {
+            margin-bottom: 30px;
+        }
+        .nav-links a {
+            margin-right: 15px;
+            color: #9b59b6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-links">
+        <a href="#privacy">Política de Privacidade</a>
+        <a href="#terms">Termos de Serviço</a>
+        <a href="#deletion">Exclusão de Dados</a>
+    </div>
+
+    <section id="privacy">
+        <h1>Política de Privacidade</h1>
+        <p><strong>CelinaCriater</strong></p>
+        <p>Esta política descreve como o CelinaCriater (aqui denominado "Serviço") coleta, usa e protege as informações dos usuários e das contas de Instagram conectadas.</p>
+        
+        <h2>1. Dados Coletados</h2>
+        <p>O Serviço interage com a Meta Graph API para acessar:</p>
+        <ul>
+            <li>Identificadores públicos da conta do Instagram Business (ID, nome de usuário).</li>
+            <li>Métricas de engajamento (número de seguidores, contagem de likes).</li>
+            <li>Conteúdo de posts e comentários públicos vinculados à conta do usuário.</li>
+            <li>Metadados de interação do usuário com o agente (comandos de voz/texto enviados ao agente).</li>
+        </ul>
+
+        <h2>2. Uso dos Dados</h2>
+        <p>Os dados são utilizados exclusivamente para:</p>
+        <ul>
+            <li>Gerar e agendar conteúdo conforme instruções do operador.</li>
+            <li>Analizar sentimento de comentários para moderação automática.</li>
+            <li>Otimizar horários de publicação com base em janelas de atividade.</li>
+        </ul>
+
+        <h2>3. Compartilhamento</h2>
+        <p>Não vendemos, alugamos ou compartilhamos dados pessoais com terceiros, exceto quando necessário para a execução dos comandos via API da Meta (ex: publicar um post). Os dados processados localmente pelo agente não saem do servidor do usuário, a menos que a interação com a API da Meta exija transmissão.</p>
+
+        <h2>4. Segurança</h2>
+        <p>Utilizamos tokens de acesso criptografados e armazenados localmente no arquivo <code>.env</code>. Recomenda-se a rotação periódica de tokens na Meta Business Suite.</p>
+
+        <h2>5. Exclusão de Dados</h2>
+        <p>O operador pode revogar o acesso do aplicativo a qualquer momento na Meta Business Suite, o que resultará na interrupção imediata do acesso a quaisquer dados.</p>
+    </section>
+
+    <section id="terms">
+        <h1>Termos de Serviço</h1>
+        <p>Ao utilizar o CelinaCriater, o usuário concorda com os seguintes termos:</p>
+
+        <h2>1. Natureza do Serviço</h2>
+        <p>O CelinaCriater é uma ferramenta de automação baseada em IA para gestão de conteúdo e moderação em redes sociais. As ações tomadas pelo agente (postagens, respostas) refletem as instruções dadas pelo operador e o treinamento do modelo de linguagem.</p>
+
+        <h2>2. Responsabilidade do Operador</h2>
+        <p>O operador é responsável pelo conteúdo publicado e pelas respostas enviadas em nome da sua conta. O operador deve revisar amostras de conteúdo gerado para garantir conformidade com as diretrizes da comunidade do Instagram.</p>
+
+        <h2>3. Limitação de Responsabilidade</h2>
+        <p>O CelinaCriater não se responsabiliza por:</p>
+        <ul>
+            <li>Banimentos ou restrições de conta causados por violação dos Termos da Meta.</li>
+            <li>Erros de interpretação semântica da IA que resultem em respostas inadequadas.</li>
+            <li>Perda de dados não sincronizados na fila local.</li>
+        </ul>
+
+        <h2>4. Conformidade</h2>
+        <p>O operador concorda em não utilizar o agente para spam, disseminação de desinformação ou violação de direitos de terceiros.</p>
+    </section>
+
+    <section id="deletion">
+        <h1>Como Excluir Seus Dados</h1>
+        <p>Para garantir a exclusão completa dos seus dados e a desconexão total do serviço, siga os passos abaixo:</p>
+
+        <h2>1. Revogar Acesso na Meta (Obrigatório)</h2>
+        <ol>
+            <li>Acesse sua <a href="https://business.facebook.com/settings" target="_blank">Meta Business Suite</a>.</li>
+            <li>Vá em <strong>Apps</strong>.</li>
+            <li>Selecione o aplicativo <strong>CelinaCriater</strong> (ID: 1509523271008975).</li>
+            <li>Clique em <strong>Remove Access</strong> ou <strong>Revoke Access</strong>.</li>
+            <li>Isso invalida o Token de Acesso imediatamente. A API deixará de responder aos nossos pedidos.</li>
+        </ol>
+
+        <h2>2. Limpeza Local</h2>
+        <ol>
+            <li>No seu servidor local, apague o arquivo <code>.env</code>.</li>
+            <li>Apague a pasta <code>insta_queue</code> (que contém a fila de posts agendados).</li>
+            <li>Apague o arquivo <code>memoria_celina_regras.md</code> se contiver dados sensíveis pessoais.</li>
+        </ol>
+
+        <h2>3. Confirmação</h2>
+        <p>Após a revogação do token, nenhum dado novo será coletado. Os dados já processados localmente serão apagados conforme o passo 2.</p>
+    </section>
+
+    <footer>
+        &copy; 2024-2026 CelinaCriater. Powered by Kindo DeepHat Architecture.
+    </footer>
+
+</body>
+</html>
